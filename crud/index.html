@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		html,body{
+			height: 100%;
+			margin: 0px;
+		}
+		table{
+			width: 100%;
+			border: 2px solid gray;
+			border-radius: 10px;
+			margin-bottom: 10px;
+		}
+		td{
+			text-align: center;
+		}
+		div{
+			height: 100%;
+			display: inline-block;
+			vertical-align: top;
+		}
+		.contenedor{
+			display: grid;
+			grid-template-columns: 20% 80%;
+		}
+	</style>
+</head>
+<body>
+	<div class="contenedor">
+		
+	
+
+	<div>
+		
+	
+	<form id="add">
+		<table>
+			<tr>
+				<td>Codigo: </td>
+				<td><input type="number" id="codigo" required min="0"></td>
+			</tr>
+			<tr>
+				<td>Nombre: </td>
+				<td><input type="text" id="nombre" required></td>
+			</tr>
+			<tr>
+				<td>Precio: </td>
+				<td><input type="number" id="precio" required min="0"></td>
+			</tr>
+			<tr>
+				<td>Cantidad: </td>
+				<td><input type="number" id="cantidad" required min="0"></td>
+			</tr>
+			<tr>
+				<td>Posicion: </td>
+				<td><input type="number" id="posicion" placeholder="opcional" min="0" max="0" value="0"></td>
+			</tr>
+			<tr>
+				<td colspan="2">Descripcion: <br>
+					<textarea id="descripcion"  required></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><button>AGREGAR</button></td>
+			</tr>
+		</table>
+	</form>
+
+	<form id="search">
+		<table>
+			<tr>
+				<td>Nombre: </td>
+				<td><input type="text" id="nombreBuscar" required></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button>BUSCAR</button></td>
+			</tr>
+		</table>
+	</form>
+
+	<form id="delete">
+		<table>
+			<tr>
+				<td>Codigo: </td>
+				<td><input type="number" id="codigoEliminar" required></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button>ELIMINAR</button></td>
+			</tr>
+		</table>
+	</form>
+
+	<p id="act">Actividad:</p>
+
+	</div>
+
+
+	<div>
+		<table>
+			<thead>
+				<th>Posicion</th>
+				<th>Codigo</th>
+				<th>Nombre</th>
+				<th>Precio</th>
+				<th>Cantidad</th>
+				<th>Descripcion</th>
+			</thead>
+			<tbody id="lista"></tbody>
+		</table>
+	</div>
+
+
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="main.js"></script>
